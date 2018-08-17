@@ -16,9 +16,11 @@ const buildControls = (props) => (
     <button
       className={classes.OrderButton}
       disabled={!props.purchasable}
+      onClick={props.ordered}
     >ORDER NOW</button>
 
     <p>Current Price: <strong>{props.price.toFixed(2)}</strong></p>
+    {props.price === 6.90 ? <p>Nice</p> : null}
 
     {controls.map(ctrl => (
       <BuildControl
