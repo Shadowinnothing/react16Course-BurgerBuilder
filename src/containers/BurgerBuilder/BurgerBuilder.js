@@ -158,7 +158,7 @@ class BurgerBuilder extends Component {
       deliveryMethod: 'fast'
     }
 
-    axios.post('/orders.json', order)
+    axios.post('/orders,json', order)
       .then(res => {
         this.setState({loading: false, purchasing: false});
       })
@@ -215,4 +215,4 @@ class BurgerBuilder extends Component {
   }
 };
 
-export default withErrorHandler(BurgerBuilder);
+export default withErrorHandler(BurgerBuilder, axios);
